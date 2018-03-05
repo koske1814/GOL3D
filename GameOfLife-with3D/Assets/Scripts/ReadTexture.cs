@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class ReadTexture : MonoBehaviour {
 
+    public Texture2D texture;
+    int width;
+    int height;
+
 
     byte[] ReadImgFile(string path){
         FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read);
         BinaryReader bin = new BinaryReader(file);
         byte[] values =  bin.ReadBytes((int)bin.BaseStream.Length);
-        bin.Close();
+        bin.Close();    
         return values;
     }
 
-    Texture2D TransGrayscale(string path,int width,int height){
+    public Texture2D TransGrayscale(string path,int width,int height){
         byte[] img = ReadImgFile(path);
         Texture2D iTexture = new Texture2D(width, height);
         iTexture.LoadImage(img);

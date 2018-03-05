@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class OpenItemBar : MonoBehaviour {
     [SerializeField]
-    private GameObject scBar;
+    GameObject canvas;
     [SerializeField]
-    private Transform canvas;
-
-    public void OnClick(){
-        GameObject obj = (GameObject)Instantiate(scBar);
-        obj.transform.SetParent(canvas,false);
-        obj.transform.position = new Vector3();
-        obj.GetComponent<FindImages>().DisplayFile("/Users/sakatakoske/");
+    GameObject img;
+    public void OnClick()
+    {
+        GameObject obj = (GameObject)Instantiate(img);
+        obj.transform.SetParent(canvas.transform, false);
+        Image texture = obj.GetComponent<Image>();
+        texture.material.mainTexture = GetTexture.GetGrayTexture(Application.dataPath + "/Image/img.png");
+        //texture.GetComponent<RectTransform>().sizeDelta = new Vector2();
+        //texture.GetComponent<RectTransform>().position = new Vector3();
+        //texture.transform.localScale = new Vector3(5, 5, 5);
+        
+        this.gameObject.SetActive(false);
     }
 }
