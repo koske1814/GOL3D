@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 50634159}
   - component: {fileID: 50634158}
   - component: {fileID: 50634161}
+  - component: {fileID: 50634162}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -244,6 +245,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 355196395}
   img: {fileID: 1294776394631272, guid: fed4b50bfa1a36943ae84df62cef1eff, type: 2}
+--- !u!114 &50634162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50634156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8bfb1924c80435392f4237c35fd454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellObj: {fileID: 1302604606802322, guid: 53820043298c28941b5513b8e0b28207, type: 2}
+  cloud: {fileID: 77938411}
+--- !u!1 &77938410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 77938411}
+  m_Layer: 0
+  m_Name: CellCloud
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77938411
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77938410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 686, y: 134, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217220645
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,36 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cell{
-    Transform cellPower;
-    Material color;
-    //public GameObject cell;
-    public Cell(float pow){
-        GameObject obj = new GameObject();
-        cellPower = obj.GetComponent<Transform>();
-        cellPower.localScale = new Vector3(1, pow, 1);
-        obj.GetComponent<Material>().color = new Color(pow, pow, pow);
-    }
-}
 
 public class CellCloud : MonoBehaviour {
-    public Cell[] cells;
-    public Texture2D texture;
-    public void MakeCells(Texture2D texture, int width, int height){
-        cells = new Cell[width * height];
-        Color[] colors = texture.GetPixels();
-        for (int i = 0; i < width * height;i++){
-            cells[i] = new Cell(colors[i].r);
-        }
-    }
-    public void MakeCells(string path)
+    public Cell[] cells { get; set; }
+    public Transform[] pos { get; set; }
+    public Texture2D texture { get; set; }
+    [SerializeField]
+    GameObject cellObj;
+    [SerializeField]
+    Transform cloud;
+    public CellCloud(Texture2D texture)
     {
-        texture = GetTexture.GetGrayTexture(path);
+        this.texture = texture;
         cells = new Cell[texture.width * texture.height];
+        pos = new Transform[texture.width * texture.height];
         Color[] colors = texture.GetPixels();
         for(int i = 0; i< texture.width * texture.height; i++)
         {
-            cells[i] = new Cell(colors[i].r);
+            GameObject obj = (GameObject)Instantiate(cellObj);
+            obj.transform.SetParent(cloud);
+            pos[i] = obj.GetComponent<Transform>();
+            pos[i].position = new Vector3(Mathf.Ceil(i / texture.width), 0, i % texture.width);
         }
     }
 }
