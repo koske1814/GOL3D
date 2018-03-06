@@ -15,6 +15,8 @@ public class OpenItemBar : MonoBehaviour {
         Image image = obj.GetComponent<Image>();
         Texture2D texture = GetTexture.GetGrayTexture(Application.dataPath + "/Image/img.png");
         image.material.mainTexture = texture;
-        CellCloud cellCloud = new CellCloud(texture);
+        GetComponent<CellCloud>().MakeCell(texture);
+//        Debug.Log("width: " + texture.width + ", height: " + texture.height);
+
     }
 }

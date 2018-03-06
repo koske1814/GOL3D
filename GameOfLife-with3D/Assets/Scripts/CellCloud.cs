@@ -11,7 +11,7 @@ public class CellCloud : MonoBehaviour {
     GameObject cellObj;
     [SerializeField]
     Transform cloud;
-    public CellCloud(Texture2D texture)
+    public void MakeCell(Texture2D texture)
     {
         this.texture = texture;
         cells = new Cell[texture.width * texture.height];
