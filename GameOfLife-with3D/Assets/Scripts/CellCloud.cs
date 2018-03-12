@@ -21,9 +21,10 @@ public class CellCloud : MonoBehaviour {
         {
             GameObject obj = (GameObject)Instantiate(cellObj);
             obj.transform.SetParent(cloud);
-            pos[i] = obj.GetComponent<Transform>();
-            pos[i].localPosition = new Vector3(Mathf.Ceil(i / texture.width), colors[i].g*4, i % texture.width);
-            pos[i].localScale = new Vector3(1, colors[i].g*8, 1);
+            cells[i] = obj.GetComponent<Cell>();
+            cells[i].SetCell(new Vector3(Mathf.Ceil(i / texture.width), colors[i].g * 4, i % texture.width), 
+                             new Vector3(1, colors[i].g * 8, 1));
         }
     }
+
 }

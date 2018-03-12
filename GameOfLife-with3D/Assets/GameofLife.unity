@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 50634158}
   - component: {fileID: 50634161}
   - component: {fileID: 50634162}
+  - component: {fileID: 50634163}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -263,6 +264,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellObj: {fileID: 1302604606802322, guid: 53820043298c28941b5513b8e0b28207, type: 2}
   cloud: {fileID: 77938411}
+--- !u!114 &50634163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50634156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c22c43f513042a6812b52576ca63a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camerapos: {fileID: 1075820081}
 --- !u!1 &77938410
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +298,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77938410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 600, y: 120, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -754,10 +767,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1075820077}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 600, y: 180, z: 100}
+  m_LocalRotation: {x: 0.18301274, y: 0.6830127, z: -0.18301274, w: 0.6830127}
+  m_LocalPosition: {x: -154, y: 114, z: 239}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 90, z: 0}

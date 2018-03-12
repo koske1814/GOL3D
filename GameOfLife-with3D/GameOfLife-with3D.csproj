@@ -332,6 +332,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Cell.cs" />
     <Compile Include="Assets\Scripts\CellCloud.cs" />
+    <Compile Include="Assets\Scripts\CellTransition.cs" />
     <Compile Include="Assets\Scripts\FindImages.cs" />
     <Compile Include="Assets\Scripts\GetTexture.cs" />
     <Compile Include="Assets\Scripts\ImportFile.cs" />
