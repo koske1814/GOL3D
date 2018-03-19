@@ -13,7 +13,7 @@ public class LookCell : MonoBehaviour {
     }
     // Update is called once per frame
     public void LookCells (Texture2D texture) {
-        camerapos.position = new Vector3(-130, 100, texture.width / 2);
-        camerapos.forward = new Vector3(texture.height / 2, 0, texture.width / 2) - camerapos.position;
+        camerapos.position = new Vector3(texture.width, 50, -100);
+        camerapos.forward = new Vector3(texture.width / 2, 0, texture.height / 2) - camerapos.position;
     }
 }

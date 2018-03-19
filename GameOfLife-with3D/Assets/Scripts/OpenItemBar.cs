@@ -22,4 +22,7 @@ public class OpenItemBar : MonoBehaviour {
 
     }
 
+    public void TransStart(){
+        GetComponent<CellCloud>().Transition();
+    }
 }
