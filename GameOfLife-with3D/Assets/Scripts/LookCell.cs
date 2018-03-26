@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LookCell : MonoBehaviour {
 
-    public Transform camerapos;
+    //public Transform camerapos;
     //public Transform target;
     //public Texture2D texture;
     void Start()
@@ -13,7 +13,7 @@ public class LookCell : MonoBehaviour {
     }
     // Update is called once per frame
     public void LookCells (Texture2D texture) {
-        camerapos.position = new Vector3(texture.width, 50, -100);
-        camerapos.forward = new Vector3(texture.width / 2, 0, texture.height / 2) - camerapos.position;
+        this.transform.position = new Vector3(texture.width, 50, -100);
+        this.transform.forward = new Vector3(texture.width / 2, 0, texture.height / 2) - this.transform.position;
     }
 }
