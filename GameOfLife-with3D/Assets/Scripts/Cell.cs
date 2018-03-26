@@ -42,6 +42,7 @@ public class Cell : MonoBehaviour {
         this.transform.position = new Vector3(this.transform.position.x, size * 2, this.transform.position.z);
     }
 
+    //周囲のセルと自分のセルのそれぞれの高さを比較し、自分が大きければ1,小さければ0を返す
     private Vector2 IsCompareBackNeghbor(){
         Vector2 result = new Vector2();
         foreach(Cell nei in this.neighbor){
@@ -50,8 +51,7 @@ public class Cell : MonoBehaviour {
         }
         return result;
     }
-
-    //周囲のセルと自分のセルのそれぞれの高さを比較し、自分が大きければ1,小さければ0を返す
+    /***
     private Vector2 IsCompareBackNeighbor(Cell[,] cells,int y,int x){
         bool isOutRange = x < 0 || x >= cells.GetLength(1) | y < 0 || y >= cells.GetLength(0);
         if(!isOutRange){
@@ -61,4 +61,5 @@ public class Cell : MonoBehaviour {
 
         return new Vector2();
     }
+    ***/
 }
