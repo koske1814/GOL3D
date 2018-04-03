@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{E7B28111-B2A2-7AB6-AB40-8AD059742BF5}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CellCloud.cs">
+    <Files>
+      <File FileName="Assets/Scripts/CellCloud.cs" Line="77" Column="14" />
+      <File FileName="Assets/Scripts/Cell.cs" Line="45" Column="21" />
+      <File FileName="Assets/Scripts/OpenItemBar.cs" Line="21" Column="11" />
+      <File FileName="Assets/Scripts/LookCell.cs" Line="17" Column="104" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GameOfLife-with3D PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>

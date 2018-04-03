@@ -37,8 +37,8 @@ public class CellCloud : MonoBehaviour {
                 cells[i, j].transform.position = new Vector3(i, 0, j);
                 cells[i, j].SetCell(texture.GetPixel(j,i).r);
                 cells[i, j].neighbor = GetNeighbor(i, j);
-                CellUpdates += cells[i, j].CellUpdate;
-                CellApplyUpdates += cells[i, j].CellApply;
+                //CellUpdates += cells[i, j].CellUpdate;
+                //CellApplyUpdates += cells[i, j].CellApply;
             }
         }
     }
@@ -64,9 +64,21 @@ public class CellCloud : MonoBehaviour {
         return n;
     }
     ***/
-    public void Transition(){
-        CellUpdates();
-        CellApplyUpdates();
+    public void Transition()
+    {
+        for (int i = 0; i < texture.height; i++){
+            for (int j = 0; j < texture.width;j++){
+                cells[i, j].CellUpdate();
+            }
+        }
+        for (int i = 0; i < texture.height; i++)
+        {
+            for (int j = 0; j < texture.width; j++)
+            {
+                cells[i, j].CellApply();
+            }
+        }
+
     }
 
     public void Run(){
